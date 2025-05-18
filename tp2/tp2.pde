@@ -1,4 +1,4 @@
-//Amel Peralta
+//Amel Lucia Peralta
 //Comision 1
 
 PImage friends1, friends2, friends3;
@@ -16,7 +16,7 @@ int botonY;
 int botonAncho;
 int botonAlto;
 
-int miFrameCount = 0; 
+int frameCount = 0; 
 
 void setup() {
   size(640, 480);
@@ -46,7 +46,7 @@ void draw() {
   
 //Primer imagen
 
-  if (miFrameCount < 300) {
+  if (frameCount < 300) {
     image(friends1, 0, 0);
     float tono = map(posX1, 400, 220, 0, 255);
     fill(0, tono);
@@ -57,7 +57,7 @@ void draw() {
     
     //Segunda imagen
 
-  } else if (miFrameCount < 600) {
+  } else if (frameCount < 600) {
     image(friends2, 0, 0);
     fill(0);
     textFont(t, 20);
@@ -98,7 +98,7 @@ void draw() {
   }
 
   if (!reiniciar) {
-    miFrameCount++;
+    frameCount++;
   } else {
     reiniciarAnimacion();
     reiniciar = false;
@@ -118,6 +118,6 @@ void reiniciarAnimacion() {
   posX2 = 600;
   posX3 = 600;
   posY3 = height;
-  miFrameCount = 0;
+  frameCount = 0;
   mostrarBotonReiniciar = false;
 }
